@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/board" />
+
+    <TableLayout
+        android:id="@+id/badatable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/table1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/c0"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:alpha="1"
+                android:onClick="playturn"
+                android:tag="0" />
+
+            <ImageView
+                android:id="@+id/c1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:alpha="1"
+                android:onClick="playturn"
+                android:tag="1" />
+
+            <ImageView
+                android:id="@+id/c2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:alpha="1"
+                android:onClick="playturn"
+                android:tag="2" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/table2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp">
+
+            <ImageView
+                android:id="@+id/c3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:alpha="1"
+                android:onClick="playturn"
+                android:tag="3" />
+
+            <ImageView
+                android:id="@+id/c4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:alpha="1"
+                android:onClick="playturn"
+                android:tag="4" />
+
+            <ImageView
+                android:id="@+id/c5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:alpha="1"
+                android:onClick="playturn"
+                android:tag="5" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/table3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/c6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:alpha="1"
+                android:onClick="playturn"
+                android:tag="6" />
+
+            <ImageView
+                android:id="@+id/c7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:alpha="1"
+                android:onClick="playturn"
+                android:tag="7" />
+
+            <ImageView
+                android:id="@+id/c8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:alpha="1"
+                android:onClick="playturn"
+                android:tag="8" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="253dp"
+        android:layout_height="185dp"
+        android:background="#283593"
+        android:fadingEdge="vertical"
+        android:orientation="vertical"
+        android:theme="@style/TextAppearance.AppCompat.Small.Inverse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47">
+
+        <TextView
+            android:id="@+id/textWinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:autoText="false"
+            android:gravity="center"
+            android:padding="10sp"
+            android:shadowColor="#77E6DA"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:singleLine="false"
+            android:textColor="#F6F3F3"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/againbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="playAgain"
+            android:text="PLay Again"
+            android:textSize="25sp"
+            app:backgroundTint="#AD1457" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

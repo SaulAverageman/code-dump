@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         String city=cityName.getText().toString();
         if (city!=""){
-            String url="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=c7685d78abe6aa7b1d79583eedd1b2b9";
+            String url="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=<>";
 
             GetJson rawjson=new GetJson();
             String rawdata="";
